@@ -6,8 +6,10 @@ class basicStat{
         int array[10];
         int size = 0;
     public:
+        // Class constructor (asks user for input)
         basicStat(){
             std::cout << "Input integers to calculate basic statics for: \n";
+            // For loop for user inputs. Ends when encounters 0 or if it reaches max size (10).
             for (int i = 0; i < 10; i++){
                 std::cin >> array[i];
                 size++;
@@ -15,6 +17,7 @@ class basicStat{
             }
         }
 
+        // Method to print the calculations
         void printResults(){
             std::cout<< "Calculations:\n";
             std::cout<< "Largest: " << findLargest() << "\n";
@@ -24,6 +27,7 @@ class basicStat{
             std::cout<< "Variance: " << calcVar() << "\n";
         }
         
+        // Method to find smallest value in array
         int findSmallest(){
             int min = array[0];
 
@@ -34,6 +38,7 @@ class basicStat{
             return min;
         }
 
+        // Method to find largest value in array
         int findLargest(){
             int max = array[0];
 
@@ -44,32 +49,41 @@ class basicStat{
             return max;
         }
 
+        // Method to calculate the mean or average of the values in the array
         double calcAvg(){
             double avg = 0;
-            
+
+            // Stores the summation of all the values
             for(int i = 0; i < size; i++){
                 avg += array[i];
             }
 
+            // Returns the summation divided by size
             return (avg/size);
         }
 
+        // Method to calculate the variance of the values in the array
         double calcVar(){
             double result = 0;
-
+            // Stores the summation of the values in the array subtracted by the mean squared
             for(int i = 0; i < size; i++){
                 result += pow((array[i] - calcAvg()), 2);
             }
-
+            // Returns the stored summation divied by size
             return (result/size);
         }
 
+        // Method to calculate the standard deviation of the values in the array
+        // Standard deviation is the square root of variance.
         double calcStdDev(){
+            // Returns the square root of the value returned by calcVariance()
             return sqrt(calcVar());
         }
 };
 
 int main(){
+    // Creates an object of class basicStat (which will also call the constructor thus asking for input)
     basicStat calculation;
+    // Calls the printResults method
     calculation.printResults();
 }
