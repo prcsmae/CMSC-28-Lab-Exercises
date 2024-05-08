@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 
 // Function declarations
 int findSmallest(int arr[], int SIZE);
@@ -12,6 +13,9 @@ void printCalculations(int arr[], int SIZE);
 
 // Main function
 int main(){
+    std::cout << "Programming Exercise 05\nSubmitted by: Precious Mae E. Jomuad";
+    std::cout << "\n-------------------------------------------------------------";
+    std::cout << "\nThis program will ask the user to input various numbers (positive or negative but not zero)\nand perform basic statistics on these numbers.\n\n";
     int array[10], size;
     inputData(array, size);
     printCalculations(array, size);
@@ -67,22 +71,22 @@ double calcStndDev(int arr[], int SIZE){
 // Function to input data into array and get number of values
 void inputData(int arr[], int& size){
     size = 0;
-    std::cout << "Input integers to calculate basic statistics for: \n";
     // For loop that asks for inputs to store in array.
     // Ends once 0 is encountered or max size (10) is reached.
     for (int i = 0; i < 10; i++){
+        std::cout << "Input integer: ";
         std::cin >> arr[i];
         size++;
         if(arr[i]==0) break;
-    }   
+    }
 }
 
 // Function to output the calculations
 void printCalculations(int arr[], int size){
-    std::cout<< "Calculations:\n";
+    std::cout<< "\nCalculations:\n";
     std::cout<< "Largest: " << findLargest(arr,size) << "\n";
     std::cout<< "Smallest: " << findSmallest(arr, size) << "\n";
-    std::cout<< "Average: " << calcAvg(arr, size) << "\n";
-    std::cout<< "Standard Deviation: " << calcStndDev(arr, size) << "\n";
-    std::cout<< "Variance: " << calcVariance(arr, size) << "\n";
+    std::cout<< "Average: " << round(calcAvg(arr, size)) << "\n";
+    std::cout<< "Standard Deviation: " << std::fixed <<std::setprecision(2) << calcStndDev(arr, size) << "\n";
+    std::cout<< "Variance: " << std::fixed <<std::setprecision(2) << calcVariance(arr, size) << "\n";
 }
