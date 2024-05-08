@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 
 class basicStat{
     private:
@@ -8,9 +9,9 @@ class basicStat{
     public:
         // Class constructor (asks user for input)
         basicStat(){
-            std::cout << "Input integers to calculate basic statics for: \n";
             // For loop for user inputs. Ends when encounters 0 or if it reaches max size (10).
             for (int i = 0; i < 10; i++){
+                std::cout << "Input integer: ";
                 std::cin >> array[i];
                 size++;
                 if(array[i]==0) break;
@@ -19,12 +20,12 @@ class basicStat{
 
         // Method to print the calculations
         void printResults(){
-            std::cout<< "Calculations:\n";
+            std::cout<< "\nCalculations:\n";
             std::cout<< "Largest: " << findLargest() << "\n";
             std::cout<< "Smallest: " << findSmallest() << "\n";
-            std::cout<< "Average: " << calcAvg() << "\n";
-            std::cout<< "Standard Deviation: " << calcStdDev() << "\n";
-            std::cout<< "Variance: " << calcVar() << "\n";
+            std::cout<< "Average: " << round(calcAvg()) << "\n";
+            std::cout<< "Standard Deviation: " << std::fixed <<std::setprecision(2) << calcStdDev() << "\n";
+            std::cout<< "Variance: " << std::fixed << std::setprecision(2) << calcVar() << "\n";
         }
         
         // Method to find smallest value in array
@@ -82,6 +83,10 @@ class basicStat{
 };
 
 int main(){
+    std::cout << "Programming Exercise 05\nSubmitted by: Precious Mae E. Jomuad";
+    std::cout << "\n-------------------------------------------------------------";
+    std::cout << "\nThis program will ask the user to input various numbers (positive or negative but not zero)\nand perform basic statistics on these numbers.\n\n";
+    
     // Creates an object of class basicStat (which will also call the constructor thus asking for input)
     basicStat calculation;
     // Calls the printResults method
