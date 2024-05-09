@@ -13,9 +13,9 @@ class basicStat{
             for (int i = 0; i < 10; i++){
                 std::cout << "Input integer: ";
                 std::cin >> array[i];
-                size++;
                 if(array[i]==0) break;
-            }
+                size++;
+                }
         }
 
         // Method to print the calculations

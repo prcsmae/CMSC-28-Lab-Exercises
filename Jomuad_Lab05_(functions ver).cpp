@@ -77,9 +77,9 @@ void inputData(int arr[], int& size){
     for (int i = 0; i < 10; i++){
         std::cout << "Input integer: ";
         std::cin >> arr[i];
-        size++;
         if(arr[i]==0) break;
-    }
+        size++;
+        }
 }
 
 // Function to output the calculations
