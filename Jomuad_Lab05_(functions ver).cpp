@@ -53,9 +53,10 @@ double calcAvg(int arr[], int SIZE){
 // Function to calculate the variance of the values in the array
 double calcVariance(int arr[], int SIZE){
     double result = 0;
+    double avg = calcAvg(arr, SIZE);
     // Sums all the values in the array subtracted by the mean raised to 2.
     for (int i = 0; i < SIZE; i++){
-        result += pow((arr[i] - calcAvg(arr, SIZE)),2);
+        result += pow((arr[i] - avg),2);
     }
     // Returns the calculated sum divided by the total number of values
     return (result/SIZE);
