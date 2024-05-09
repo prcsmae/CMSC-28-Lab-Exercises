@@ -66,9 +66,10 @@ class basicStat{
         // Method to calculate the variance of the values in the array
         double calcVar(){
             double result = 0;
+            double avg = calcAvg();
             // Stores the summation of the values in the array subtracted by the mean squared
             for(int i = 0; i < size; i++){
-                result += pow((array[i] - calcAvg()), 2);
+                result += pow((array[i] - avg), 2);
             }
             // Returns the stored summation divied by size
             return (result/size);
