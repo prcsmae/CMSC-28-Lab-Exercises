@@ -16,7 +16,7 @@ int main(){
     std::cout << "Programming Exercise 05\nSubmitted by: Precious Mae E. Jomuad";
     std::cout << "\n-------------------------------------------------------------";
     std::cout << "\nThis program will ask the user to input various numbers (positive or negative but not zero)\nand perform basic statistics on these numbers.\n\n";
-    int array[10], size;
+    int array[10], size = 0;
     inputData(array, size);
     printCalculations(array, size);
 }
@@ -71,7 +71,6 @@ double calcStndDev(int arr[], int SIZE){
 
 // Function to input data into array and get number of values
 void inputData(int arr[], int& size){
-    size = 0;
     // For loop that asks for inputs to store in array.
     // Ends once 0 is encountered or max size (10) is reached.
     for (int i = 0; i < 10; i++){
