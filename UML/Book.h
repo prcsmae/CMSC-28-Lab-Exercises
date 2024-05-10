@@ -9,8 +9,8 @@ class Book{
     string publisher;
 
 public:
-    Book(const string& title, const string& author, const string& isbn)
-        : title(title), author(author), isbn(isbn) {
+    Book(const string& title, const string& author, const string& isbn, const string& publisher)
+        : title(title), author(author), isbn(isbn), publisher(publisher) {
     }
 
     string getTitle(){
