@@ -6,5 +6,5 @@ This repository contains my lab exercises for the CMSC 28 course.
 - Lab 05
    - Program that asks the user to input various numbers (positive or negative but not zero) and performs basic statistics on these numbers.
 
-- UML Class Diagram (Not a programming exercise)
+- UML Class Diagram (Not a lab programming exercise)
    - Custom header file containing a class and uses it in testBook.cpp
