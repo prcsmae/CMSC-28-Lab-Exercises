@@ -41,23 +41,22 @@ public:
         return publisher;
     }
 
-    // Sets a new title and returns it
+    // Sets a new title
     void setTitle(const string& bktitle){
         title = bktitle;
-        return title;
     }
 
-    // Sets a new author and returns it
+    // Sets a new author
     void setAuthor(const string& bkauthor){
         author = bkauthor;
     }
 
-    // Sets a new ISBN and returns it
+    // Sets a new ISBN
     void setISBN(const string& bkisbn){
         isbn = bkisbn;
     }
 
-    // Sets a new publisher and returns it 
+    // Sets a new publisher
    void setPublisher(const string& bkpublisher){
         publisher = bkpublisher;
    }

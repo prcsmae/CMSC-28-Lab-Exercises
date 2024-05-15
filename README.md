@@ -1,6 +1,8 @@
 # CMSC 28 Lab Exercises
 This repository contains my lab exercises for the CMSC 28 course.
 
+*Note: Still learning so expect problems (including Git problems)*
+
 ## List of Programming Exercises
 
 - Lab 05
