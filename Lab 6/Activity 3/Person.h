@@ -10,6 +10,7 @@ using std::list;
  * @brief Represents a person with first name, last name, and gender.
  */
 class Person{
+protected:
     string fname; /**< The first name of the person. */
     string lname; /**< The last name of the person. */
     string gender; /**< The gender of the person. */
