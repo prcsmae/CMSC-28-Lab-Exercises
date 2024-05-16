@@ -5,7 +5,6 @@
 
 using std::string;
 using std::list;
-using std::endl;
 using std::getline;
 using std::cout;
 using std::cin;
