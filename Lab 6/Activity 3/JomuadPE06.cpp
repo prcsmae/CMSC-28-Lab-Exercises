@@ -66,11 +66,9 @@ int main(){
     
     // Creates an object of class Person
     Person director;
-
+    string fn, ln, gender;
     // Do-while loop that asks for information for the attributes in the class Person
     do{
-        string fn, ln, gender;
-        
         cout << "\nEnter first name: ";
         getline(cin, fn);
         // Sets the fname in class Person
@@ -105,11 +103,8 @@ int main(){
     cout << "\nWho is/are the actor(s)/actress(es): \n";
     // Creates an object of class Person
     Person actor;
-
     // Do-while loop that asks for information for the attributes in the class Person
     do{
-        string fn, ln, gender;
-        
         cout << "\nEnter first name: ";
         getline(cin, fn);
         // Sets fname in class Person
