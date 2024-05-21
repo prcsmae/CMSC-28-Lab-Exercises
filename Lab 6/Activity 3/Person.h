@@ -1,4 +1,6 @@
-#include <iostream>
+#ifndef PERSON
+#define PERSON
+
 #include <list>
 #include <string>
 
@@ -17,47 +19,49 @@ public:
   /**
    * @brief Default constructor for the Person class.
    */
-  Person() {}
+  Person();
 
   /**
    * @brief Sets the first name of the person.
    * @param fn The first name to set.
    */
-  void setFName(const string &fn) { fname = fn; }
+  void setFName(const string &fn);
 
   /**
    * @brief Sets the last name of the person.
    * @param ln The last name to set.
    */
-  void setLName(const string &ln) { lname = ln; }
+  void setLName(const string &ln);
 
   /**
    * @brief Sets the gender of the person.
    * @param g The gender to set.
    */
-  void setGender(const string &g) { gender = g; }
+  void setGender(const string &g);
 
   /**
    * @brief Gets the first name of the person.
    * @return The first name of the person.
    */
-  const string &getFName() const { return fname; }
+  const string &getFName() const;
 
   /**
    * @brief Gets the last name of the person.
    * @return The last name of the person.
    */
-  const string getLName() const { return lname; }
+  const string getLName() const;
 
   /**
    * @brief Gets the full name of the person.
    * @return The full name of the person.
    */
-  const string getName() { return (fname + " " + lname); }
+  const string getName();
 
   /**
    * @brief Gets the gender of the person.
    * @return The gender of the person.
    */
-  const string &getGender() const { return gender; }
+  const string &getGender() const;
 };
+
+#endif

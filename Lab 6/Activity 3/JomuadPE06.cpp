@@ -1,4 +1,7 @@
-#include "Movie.h" // Include path to Movie.h
+#include "Movie.cpp"
+#include "Movie.h"
+#include "Person.cpp"
+#include "Person.h"
 #include <iostream>
 #include <list>
 #include <string>
