@@ -40,11 +40,7 @@ int main() {
     // Clears input buffer
     cin.ignore();
 
-    if (!choice) {
-      break;
-    }
-
-  } while (1);
+  } while (choice);
 
   // Code block to ask for user input on directors
   cout << "\nWho is/are the director(s): \n";
@@ -70,10 +66,7 @@ int main() {
     cin >> choice;
     cin.ignore();
 
-    if (!choice) {
-      break;
-    }
-  } while (1);
+  } while (choice);
 
   cout << "\nWho is/are the actor(s)/actress(es): \n";
   Person actor;
@@ -97,10 +90,7 @@ int main() {
     cin >> choice;
     cin.ignore();
 
-    if (!choice) {
-      break;
-    }
-  } while (1);
+  } while (choice);
 
   // Printing out of information entered
 
