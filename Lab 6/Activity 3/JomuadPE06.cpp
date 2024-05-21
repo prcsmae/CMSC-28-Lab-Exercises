@@ -42,25 +42,25 @@ int main() {
 
   } while (choice);
 
-  // Code block to ask for user input on directors
-  cout << "\nWho is/are the director(s): \n";
-
-  Person director;
+  // Use a placeholder Person object to collect input
+  Person person;
   string fn, ln, gender;
+
+  cout << "\nWho is/are the director(s): \n";
   do {
     cout << "\nEnter first name: ";
     getline(cin, fn);
-    director.setFName(fn);
+    person.setFName(fn);
 
     cout << "\nEnter last name: ";
     getline(cin, ln);
-    director.setLName(ln);
+    person.setLName(ln);
 
     cout << "\nEnter gender: ";
     getline(cin, gender);
-    director.setGender(gender);
+    person.setGender(gender);
 
-    movie1.addDirector(director);
+    movie1.addDirector(person);
 
     cout << "\nAre there any more?\n[1] Yes\n[0] No\nChoice: ";
     cin >> choice;
@@ -69,22 +69,20 @@ int main() {
   } while (choice);
 
   cout << "\nWho is/are the actor(s)/actress(es): \n";
-  Person actor;
-
   do {
     cout << "\nEnter first name: ";
     getline(cin, fn);
-    actor.setFName(fn);
+    person.setFName(fn);
 
     cout << "\nEnter last name: ";
     getline(cin, ln);
-    actor.setLName(ln);
+    person.setLName(ln);
 
     cout << "\nEnter gender: ";
     getline(cin, gender);
-    actor.setGender(gender);
+    person.setGender(gender);
 
-    movie1.addActor(actor);
+    movie1.addActor(person);
 
     cout << "\nAre there any more?\n[1] Yes\n[0] No\nChoice: ";
     cin >> choice;
