@@ -11,9 +11,7 @@ using std::string;
  */
 class Person {
 protected:
-  string fname;  /**< The first name of the person. */
-  string lname;  /**< The last name of the person. */
-  string gender; /**< The gender of the person. */
+  string fname, lname, gender;
 
 public:
   /**
@@ -55,7 +53,7 @@ public:
    * @brief Gets the full name of the person.
    * @return The full name of the person.
    */
-  string getName() { return (fname + " " + lname); }
+  const string getName() { return (fname + " " + lname); }
 
   /**
    * @brief Gets the gender of the person.
