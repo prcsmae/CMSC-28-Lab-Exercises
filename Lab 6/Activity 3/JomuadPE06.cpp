@@ -15,19 +15,17 @@ int main() {
   cout << "\nProgrammed by: Precious Mae E. Jomuad\n";
 
   string title, synopsis, rating, genre;
-  Movie movie1;
 
   cout << "\nEnter movie title: ";
   getline(cin, title);
-  movie1.setTitle(title);
 
   cout << "\nEnter synopsis: ";
   getline(cin, synopsis);
-  movie1.setSynopsis(synopsis);
 
   cout << "\nEnter MPAA Rating: ";
   getline(cin, rating);
-  movie1.setRating(rating);
+
+  Movie movie1(title, synopsis, rating);
 
   // Declaration of variable choice to be used in the do-while loops below
   int choice;

@@ -25,16 +25,25 @@ using std::string;
  * the synopsis, set the rating, add genres, and retrieve information about the
  * movie.
  */
-class Movie : private Person {
-  list<Person> directors;
-  list<Person> actors;
-  string title;
-  string synopsis;
-  string rating;
+class Movie {
+  string title, synopsis, rating;
+  list<Person> directors, actors;
   list<string> genre;
 
 public:
-  Movie() : Person() {}
+  /**
+   * @brief Create a movie using title, synopsis, and rating.
+   *
+   * @param title The title of the movie.
+   * @param synopsis The synopsis of the movie.
+   * @param rating The rating of the movie.
+   * @return A Movie with the given title, synopsis, and rating.
+   */
+  Movie(string title, string synopsis, string rating) {
+    this->title = title;
+    this->synopsis = synopsis;
+    this->rating = rating;
+  }
 
   /**
    * @brief Adds a director to the movie.
@@ -47,24 +56,6 @@ public:
    * @param actor The actor to be added.
    */
   void addActor(const Person &actor) { actors.push_back(actor); }
-
-  /**
-   * @brief Sets the title of the movie.
-   * @param t The title of the movie.
-   */
-  void setTitle(const string &t) { title = t; }
-
-  /**
-   * @brief Sets the synopsis of the movie.
-   * @param text The synopsis of the movie.
-   */
-  void setSynopsis(const string &text) { synopsis = text; }
-
-  /**
-   * @brief Sets the rating of the movie.
-   * @param rate The rating of the movie.
-   */
-  void setRating(const string &rate) { rating = rate; }
 
   /**
    * @brief Adds a genre to the movie.
