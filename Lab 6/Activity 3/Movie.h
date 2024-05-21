@@ -8,22 +8,14 @@ using std::string;
 
 /**
  * @class Movie
- * @brief Represents a movie.
- *
- * The Movie class is a derived class of the Person class and represents a
- * movie. It contains information about the movie's directors, actors, title,
- * synopsis, rating, and genre.
- */
-/**
- * @class Movie
  * @brief Represents a movie with directors, actors, title, synopsis, rating,
  * and genre.
  *
- * The Movie class is a derived class of the Person class. It contains a list of
- * directors, a list of actors, a title, a synopsis, a rating, and a list of
- * genres. It provides methods to add directors, add actors, set the title, set
- * the synopsis, set the rating, add genres, and retrieve information about the
- * movie.
+ * It contains a list of directors, a list of actors, a title, a synopsis, a
+ * rating, and a list of genres.
+ *
+ * It provides methods to add directors, add
+ * actors, add genres, and retrieve information about the movie.
  */
 class Movie {
   string title, synopsis, rating;
