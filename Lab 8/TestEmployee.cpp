@@ -8,6 +8,16 @@ using std::cout;
 using std::getline;
 using std::string;
 
+/**
+ * @brief The main function of the program.
+ * 
+ * This function generates a welcome message based on user input. It prompts the user to enter
+ * information about an employee, such as their first name, last name, gender, email address,
+ * phone number, position, office, and salary. It then creates an Employee object with the entered
+ * information and displays a welcome message along with the employee's details.
+ * 
+ * @return int The exit status of the program.
+ */
 int main()
 {
     cout << "This program will generate a welcome message based on user input.\n\n"

@@ -7,6 +7,13 @@ using std::cout;
 using std::getline;
 using std::string;
 
+/**
+ * The main function is the entry point of the program.
+ * It generates a welcome message based on user input.
+ * It prompts the user to enter student information such as name, gender, email, phone number, student number, course, department, and college.
+ * It creates a Student object and sets the entered information.
+ * Finally, it displays the welcome message along with the student's details.
+ */
 int main()
 {
         cout << "This program will generate a welcome message based on user input.\n\n"
