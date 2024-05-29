@@ -2,30 +2,53 @@
 #include <string>
 #include <list>
 
-using std::string;
 using std::list;
+using std::string;
 
 /**
  * @class Person
- * @brief Represents a person with first name, last name, and gender.
+ * @brief Represents a person with basic information such as name, gender, email address, and contact number.
  */
-class Person{
+class Person
+{
 protected:
-    string fname; /**< The first name of the person. */
-    string lname; /**< The last name of the person. */
-    string gender; /**< The gender of the person. */
+    string fname; 
+    string lname;  
+    string gender; 
 
 public:
+    string emailAdd;
+    string cpNumber;
+
     /**
      * @brief Default constructor for the Person class.
      */
-    Person(){}
+    Person() {}
+
+    /**
+     * @brief Sets the email address of the person.
+     * @param email The email address to set.
+     */
+    void setEmailAdd(const string &email)
+    {
+        emailAdd = email;
+    }
+
+    /**
+     * @brief Sets the contact number of the person.
+     * @param num The contact number to set.
+     */
+    void setCPNum(const string &num)
+    {
+        cpNumber = num;
+    }
 
     /**
      * @brief Sets the first name of the person.
      * @param fn The first name to set.
      */
-    void setFName(const string& fn){
+    void setFName(const string &fn)
+    {
         fname = fn;
     }
 
@@ -33,7 +56,8 @@ public:
      * @brief Sets the last name of the person.
      * @param ln The last name to set.
      */
-    void setLName(const string& ln){
+    void setLName(const string &ln)
+    {
         lname = ln;
     }
 
@@ -41,15 +65,35 @@ public:
      * @brief Sets the gender of the person.
      * @param g The gender to set.
      */
-    void setGender(const string& g){
+    void setGender(const string &g)
+    {
         gender = g;
+    }
+
+    /**
+     * @brief Gets the email address of the person.
+     * @return The email address of the person.
+     */
+    const string &getEmailAdd() const
+    {
+        return emailAdd;
+    }
+
+    /**
+     * @brief Gets the contact number of the person.
+     * @return The contact number of the person.
+     */
+    const string &getCPNumber() const
+    {
+        return cpNumber;
     }
 
     /**
      * @brief Gets the first name of the person.
      * @return The first name of the person.
      */
-    const string& getFName() const{
+    const string &getFName() const
+    {
         return fname;
     }
 
@@ -57,7 +101,8 @@ public:
      * @brief Gets the last name of the person.
      * @return The last name of the person.
      */
-    const string getLName() const{
+    const string getLName() const
+    {
         return lname;
     }
 
@@ -65,7 +110,8 @@ public:
      * @brief Gets the full name of the person.
      * @return The full name of the person.
      */
-    string getName(){
+    string getName()
+    {
         return (fname + " " + lname);
     }
 
@@ -73,7 +119,8 @@ public:
      * @brief Gets the gender of the person.
      * @return The gender of the person.
      */
-    const string& getGender() const{
+    const string &getGender() const
+    {
         return gender;
     }
 };
