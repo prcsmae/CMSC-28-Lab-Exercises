@@ -14,7 +14,7 @@ class Person
 protected:
     string fname; 
     string lname;  
-    string gender; 
+    char gender; 
 
 public:
     string emailAdd;
@@ -65,7 +65,7 @@ public:
      * @brief Sets the gender of the person.
      * @param g The gender to set.
      */
-    void setGender(const string &g)
+    void setGender(char g)
     {
         gender = g;
     }
@@ -83,7 +83,7 @@ public:
      * @brief Gets the contact number of the person.
      * @return The contact number of the person.
      */
-    const string &getCPNumber() const
+    const string &getCPNum() const
     {
         return cpNumber;
     }
@@ -101,25 +101,16 @@ public:
      * @brief Gets the last name of the person.
      * @return The last name of the person.
      */
-    const string getLName() const
+    const string &getLName() const
     {
         return lname;
-    }
-
-    /**
-     * @brief Gets the full name of the person.
-     * @return The full name of the person.
-     */
-    string getName()
-    {
-        return (fname + " " + lname);
     }
 
     /**
      * @brief Gets the gender of the person.
      * @return The gender of the person.
      */
-    const string &getGender() const
+    char getGender()
     {
         return gender;
     }
